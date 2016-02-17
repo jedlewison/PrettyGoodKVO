@@ -2,7 +2,7 @@ PODS:
   - KVOController (1.0.3)
   - Nimble (3.1.0)
   - PrettyGoodKVO (0.0.1)
-  - Quick (0.9.0)
+  - Quick (0.9.1)
 
 DEPENDENCIES:
   - KVOController
@@ -16,14 +16,14 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   PrettyGoodKVO:
-    :commit: 546ffe1d1ef14e6f74b838957c6b93a78d788d83
+    :commit: e925be78632f3d951de9949e418fd096fb583846
     :git: https://github.com/jedlewison/PrettyGoodKVO.git
 
 SPEC CHECKSUMS:
   KVOController: 9fd8f0343670994e4b6f9f0b31f5a45663f3e1cf
   Nimble: 79d40f4d69d47314229bbabacaa02b8838c779b9
   PrettyGoodKVO: bcff69526e55261a7ebf780b079e0d12e927f102
-  Quick: 332eb1da73125a2106dd637424c803f2ae97e4a9
+  Quick: a5221fc21788b6aeda934805e68b061839bc3165
 
 PODFILE CHECKSUM: 3324603c83ee4cd6ca5bf51df4b4ab4b0820af51
 
