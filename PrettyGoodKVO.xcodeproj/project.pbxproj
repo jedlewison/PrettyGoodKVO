@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08E86E86132D0778A904A526 /* Pods_TestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9692FFC98D0DB65BEC42C72 /* Pods_TestApp.framework */; };
-		3375BFA223AD63370F52FAE0 /* Pods_PrettyGoodKVOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC99928A71B9DE833A69645F /* Pods_PrettyGoodKVOTests.framework */; };
+		0EF8887BCF199B2057820CE0 /* Pods_PrettyGoodKVOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630B7810F40A5A6D4DA2209E /* Pods_PrettyGoodKVOTests.framework */; };
 		8515D57A1C68FA1B001027B9 /* PGKVOChangeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8515D5791C68FA1B001027B9 /* PGKVOChangeParser.swift */; };
 		8517D7A61C66558B00BE2809 /* WeakClientBoxSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517D7A51C66558B00BE2809 /* WeakClientBoxSpec.swift */; };
 		8517D7A81C666B0800BE2809 /* ObservationRequestsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517D7A71C666B0800BE2809 /* ObservationRequestsSpec.swift */; };
@@ -40,6 +39,7 @@
 		85EE52231C67A9DB00020118 /* PGKVOChangeValueConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EE52221C67A9DB00020118 /* PGKVOChangeValueConvertible.swift */; };
 		85EE52261C67AA2C00020118 /* PGKVOChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EE52251C67AA2C00020118 /* PGKVOChange.swift */; };
 		85F2C03D1C664DD30012AB1A /* PrettyGoodKVOSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F2C03C1C664DD30012AB1A /* PrettyGoodKVOSpec.swift */; };
+		BA5010E5DCC6100820E442E9 /* Pods_TestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D98150E60A903E84FC79FF0 /* Pods_TestApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +53,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5996BB62EA41EC767AED4DB7 /* Pods-PrettyGoodKVOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrettyGoodKVOTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrettyGoodKVOTests/Pods-PrettyGoodKVOTests.debug.xcconfig"; sourceTree = "<group>"; };
-		80A8DC09F3BE1D82F7E7BC91 /* Pods-PrettyGoodKVOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrettyGoodKVOTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrettyGoodKVOTests/Pods-PrettyGoodKVOTests.release.xcconfig"; sourceTree = "<group>"; };
+		023014861156A6783900A5E2 /* Pods-PrettyGoodKVOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrettyGoodKVOTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrettyGoodKVOTests/Pods-PrettyGoodKVOTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D98150E60A903E84FC79FF0 /* Pods_TestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F9B4A7A9815DA6DDDCB9567 /* Pods-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		5AFF57CA9F922D409E51BDC1 /* Pods-PrettyGoodKVOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrettyGoodKVOTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrettyGoodKVOTests/Pods-PrettyGoodKVOTests.release.xcconfig"; sourceTree = "<group>"; };
+		630B7810F40A5A6D4DA2209E /* Pods_PrettyGoodKVOTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrettyGoodKVOTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75036F97DD3D563620545901 /* Pods-TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.release.xcconfig"; sourceTree = "<group>"; };
 		8515D5791C68FA1B001027B9 /* PGKVOChangeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PGKVOChangeParser.swift; sourceTree = "<group>"; };
 		8517D7A51C66558B00BE2809 /* WeakClientBoxSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakClientBoxSpec.swift; sourceTree = "<group>"; };
 		8517D7A71C666B0800BE2809 /* ObservationRequestsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservationRequestsSpec.swift; sourceTree = "<group>"; };
@@ -94,10 +98,6 @@
 		85EE52221C67A9DB00020118 /* PGKVOChangeValueConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PGKVOChangeValueConvertible.swift; sourceTree = "<group>"; };
 		85EE52251C67AA2C00020118 /* PGKVOChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PGKVOChange.swift; sourceTree = "<group>"; };
 		85F2C03C1C664DD30012AB1A /* PrettyGoodKVOSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyGoodKVOSpec.swift; sourceTree = "<group>"; };
-		C4337AA17F39B0FA90AE3A4F /* Pods-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
-		D321C1A55E56418A2FCA03C0 /* Pods-TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.release.xcconfig"; sourceTree = "<group>"; };
-		D9692FFC98D0DB65BEC42C72 /* Pods_TestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC99928A71B9DE833A69645F /* Pods_PrettyGoodKVOTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrettyGoodKVOTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08E86E86132D0778A904A526 /* Pods_TestApp.framework in Frameworks */,
+				BA5010E5DCC6100820E442E9 /* Pods_TestApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,33 +121,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				858990131C61DBB300A8E186 /* PrettyGoodKVO.framework in Frameworks */,
-				3375BFA223AD63370F52FAE0 /* Pods_PrettyGoodKVOTests.framework in Frameworks */,
+				0EF8887BCF199B2057820CE0 /* Pods_PrettyGoodKVOTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2534FB70F13D2634501DBCA8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FC99928A71B9DE833A69645F /* Pods_PrettyGoodKVOTests.framework */,
-				D9692FFC98D0DB65BEC42C72 /* Pods_TestApp.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7AF1CC95E687EA35B5001A4D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5996BB62EA41EC767AED4DB7 /* Pods-PrettyGoodKVOTests.debug.xcconfig */,
-				80A8DC09F3BE1D82F7E7BC91 /* Pods-PrettyGoodKVOTests.release.xcconfig */,
-				C4337AA17F39B0FA90AE3A4F /* Pods-TestApp.debug.xcconfig */,
-				D321C1A55E56418A2FCA03C0 /* Pods-TestApp.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		8517D7B01C669A2B00BE2809 /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,8 +152,8 @@
 				858990161C61DBB300A8E186 /* PrettyGoodKVOTests */,
 				8517D7B01C669A2B00BE2809 /* TestApp */,
 				858990091C61DBB300A8E186 /* Products */,
-				7AF1CC95E687EA35B5001A4D /* Pods */,
-				2534FB70F13D2634501DBCA8 /* Frameworks */,
+				AFAE8F9F7DF75A65FDB0F962 /* Pods */,
+				F794C5BC7BA6824B731BB803 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -259,6 +239,26 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
+		AFAE8F9F7DF75A65FDB0F962 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				023014861156A6783900A5E2 /* Pods-PrettyGoodKVOTests.debug.xcconfig */,
+				5AFF57CA9F922D409E51BDC1 /* Pods-PrettyGoodKVOTests.release.xcconfig */,
+				4F9B4A7A9815DA6DDDCB9567 /* Pods-TestApp.debug.xcconfig */,
+				75036F97DD3D563620545901 /* Pods-TestApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F794C5BC7BA6824B731BB803 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				630B7810F40A5A6D4DA2209E /* Pods_PrettyGoodKVOTests.framework */,
+				2D98150E60A903E84FC79FF0 /* Pods_TestApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -277,12 +277,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8517D7BE1C669A2C00BE2809 /* Build configuration list for PBXNativeTarget "TestApp" */;
 			buildPhases = (
-				F805A9169A88C5EF0154F443 /* Check Pods Manifest.lock */,
+				EE375779BE0C27FA43232A0A /* Check Pods Manifest.lock */,
 				8517D7AB1C669A2B00BE2809 /* Sources */,
 				8517D7AC1C669A2B00BE2809 /* Frameworks */,
 				8517D7AD1C669A2B00BE2809 /* Resources */,
-				7AE1E6D284046019326F615D /* Embed Pods Frameworks */,
-				547AF546EAD09056C795A511 /* Copy Pods Resources */,
+				103BEAB6CF22FAD43074852E /* Embed Pods Frameworks */,
+				C16F34338CADB87BC9A9C2C4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -315,12 +315,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8589901F1C61DBB300A8E186 /* Build configuration list for PBXNativeTarget "PrettyGoodKVOTests" */;
 			buildPhases = (
-				6D5BE3CFA463215E1E6541EA /* Check Pods Manifest.lock */,
+				CEF606B77ECAD92C828A6330 /* Check Pods Manifest.lock */,
 				8589900E1C61DBB300A8E186 /* Sources */,
 				8589900F1C61DBB300A8E186 /* Frameworks */,
 				858990101C61DBB300A8E186 /* Resources */,
-				04C189115832290FEC04733B /* Embed Pods Frameworks */,
-				C2AE874452A60D7F2AF67F4E /* Copy Pods Resources */,
+				6F0A44A77C2DDA64A450F8A9 /* Embed Pods Frameworks */,
+				A7658BF4ED3FB02980ECCD56 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -401,52 +401,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		04C189115832290FEC04733B /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrettyGoodKVOTests/Pods-PrettyGoodKVOTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		547AF546EAD09056C795A511 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestApp/Pods-TestApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6D5BE3CFA463215E1E6541EA /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		7AE1E6D284046019326F615D /* Embed Pods Frameworks */ = {
+		103BEAB6CF22FAD43074852E /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -461,7 +416,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestApp/Pods-TestApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C2AE874452A60D7F2AF67F4E /* Copy Pods Resources */ = {
+		6F0A44A77C2DDA64A450F8A9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrettyGoodKVOTests/Pods-PrettyGoodKVOTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7658BF4ED3FB02980ECCD56 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -476,7 +446,37 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrettyGoodKVOTests/Pods-PrettyGoodKVOTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F805A9169A88C5EF0154F443 /* Check Pods Manifest.lock */ = {
+		C16F34338CADB87BC9A9C2C4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestApp/Pods-TestApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEF606B77ECAD92C828A6330 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EE375779BE0C27FA43232A0A /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -573,7 +573,7 @@
 /* Begin XCBuildConfiguration section */
 		8517D7BF1C669A2C00BE2809 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4337AA17F39B0FA90AE3A4F /* Pods-TestApp.debug.xcconfig */;
+			baseConfigurationReference = 4F9B4A7A9815DA6DDDCB9567 /* Pods-TestApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -588,7 +588,7 @@
 		};
 		8517D7C01C669A2C00BE2809 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D321C1A55E56418A2FCA03C0 /* Pods-TestApp.release.xcconfig */;
+			baseConfigurationReference = 75036F97DD3D563620545901 /* Pods-TestApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -729,7 +729,7 @@
 		};
 		858990201C61DBB300A8E186 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5996BB62EA41EC767AED4DB7 /* Pods-PrettyGoodKVOTests.debug.xcconfig */;
+			baseConfigurationReference = 023014861156A6783900A5E2 /* Pods-PrettyGoodKVOTests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = PrettyGoodKVOTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -740,7 +740,7 @@
 		};
 		858990211C61DBB300A8E186 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80A8DC09F3BE1D82F7E7BC91 /* Pods-PrettyGoodKVOTests.release.xcconfig */;
+			baseConfigurationReference = 5AFF57CA9F922D409E51BDC1 /* Pods-PrettyGoodKVOTests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = PrettyGoodKVOTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

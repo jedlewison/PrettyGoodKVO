@@ -34,8 +34,6 @@ public extension PGKVOObserving {
     ///     - object: The object to observe. Must be an NSObject.
     ///     - keyPath: The keyPath to observe.
     ///     - initialValue: The initial value. Will be immediately returned in the closure.
-    ///     - validateSelector: Validates, in debug mode, that the observed object responds to the selector
-    ///       specified by the keyPath
     ///     - resultsQueue: When non-nil, results will be delivered on this queue. Otherwise, results will be
     ///       delivered on the queue where the KVO notification was sent.
     ///     - closure: A closure returning the `PGKVOChange` instance.
@@ -44,11 +42,9 @@ public extension PGKVOObserving {
         object: Observed,
         keyPath: String,
         initialValue: Value,
-        validateSelector: Bool = true,
         resultsQueue queue: NSOperationQueue? = nil,
         closure: (change: PGKVOChange<Observed, Value>) -> ())
     {
-        assert(!validateSelector || object.asNSObject.respondsToSelector(Selector(keyPath)), "\(object) does not respond to selector \(keyPath)")
         assert(Value.self != NSArray.self && Value.self != NSSet.self, "PGKVOObserving does not support observing Foundation collection types")
         let initialChange = PGKVOChange(observed: object, keyPath: keyPath, initialValue: initialValue, observer: self)
         performClosure(closure(change: initialChange), onQueue: queue)
@@ -71,11 +67,9 @@ public extension PGKVOObserving {
         object: Observed,
         keyPath: String,
         initialValue: Value,
-        validateSelector: Bool = true,
         resultsQueue queue: NSOperationQueue? = nil,
         closure: (change: PGKVOChange<Observed, Value>) -> ())
     {
-        assert(!validateSelector || object.asNSObject.respondsToSelector(Selector(keyPath)), "\(object) does not respond to selector \(keyPath)")
         assert(Value.self != NSArray.self && Value.self != NSSet.self, "PGKVOObserving does not support observing Foundation collection types")
 
         let initialChange = PGKVOChange(observed: object, keyPath: keyPath, initialValue: initialValue, observer: self)

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import KVOController
 import PrettyGoodKVO
 
 func measureBlock(@noescape block: () -> ()) {
@@ -54,7 +53,6 @@ class ObservableObject: NSObject, PGKVOObserving {
 
 enum ObservationMode {
     case None
-    case KVOController
     case PrettyGoodKVOSwift
     case PrettyGoodKVOObjc
 }
@@ -73,7 +71,6 @@ class Observationist: NSObject, PGKVOObserving {
 
     func startObserving(mode: ObservationMode) {
         print(mode)
-        self.KVOController = nil
         let ops: [[NSOperation]] = (0..<obCount).map {
             obsCount = 0
             let index = $0
@@ -86,27 +83,6 @@ class Observationist: NSObject, PGKVOObserving {
             switch mode {
             case .None:
                 addObserversOperation = NSBlockOperation()
-            case .KVOController:
-                addObserversOperation = NSBlockOperation {
-
-                    self.KVOController.observe(observableObject, keyPath: "value", options: [.Old, .New, .Initial]) {
-                        [weak self] observation in
-                        self?.incrementOpsCount()
-                        incrementObservationCount()
-                    }
-
-                    self.KVOController.observe(observableObject, keyPath: "text", options: [.Old, .New, .Initial]) {
-                        [weak self] observation in
-                        self?.incrementOpsCount()
-                        incrementObservationCount()
-                    }
-
-                    self.KVOController.observe(observableObject, keyPath: "kind", options: [.Old, .New, .Initial]) {
-                        [weak self] observation in
-                        self?.incrementOpsCount()
-                        incrementObservationCount()
-                    }
-                }
 
             case .PrettyGoodKVOSwift:
                 addObserversOperation = NSBlockOperation {
@@ -215,7 +191,7 @@ class ViewController: UIViewController, PGKVOObserving {
             case 0:
                 obsMode = .None
             case 1:
-                obsMode = .KVOController
+                obsMode = .None // used for other ad hoc testing
             case 2:
                 obsMode =  .PrettyGoodKVOSwift
             case 3:
