@@ -46,3 +46,13 @@
 }
 
 @end
+
+
+@implementation TestScrollView
+
+- (void)dealloc
+{
+    NSLog(@"TestScrollView did dealloc");
+}
+
+@end
