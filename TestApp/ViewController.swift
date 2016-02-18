@@ -207,6 +207,10 @@ class ViewController: UIViewController, PGKVOObserving {
     let observationist = Observationist()
 
     var obsMode: ObservationMode = .None
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        timer = nil
+    }
 
     @IBAction func didStart(sender: UIButton) {
         observabledeinits = 0
@@ -236,10 +240,19 @@ class ViewController: UIViewController, PGKVOObserving {
 
     }
 
+    var timer: CADisplayLink? {
+        didSet {
+            if oldValue != timer {
+                oldValue?.invalidate()
+            }
+        }
+    }
+
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        let adsf = CADisplayLink(target: self, selector: Selector("updateDeinits:"))
-        adsf.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
+        timer = CADisplayLink(target: self, selector: Selector("updateDeinits:"))
+        timer?.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
+
         observe(scrollView, keyPath: "contentOffset", initialValue: scrollView.contentOffset) {
             change in
             debugPrint(change)
@@ -249,10 +262,11 @@ class ViewController: UIViewController, PGKVOObserving {
     }
     @IBOutlet var deinitLabel: UILabel!
     func updateDeinits(sender: CADisplayLink) {
-        deinitLabel.text = "Observable: \(observabledeinits) || Proxy: UN || Obs: \(observationCount)"
+        deinitLabel.text = "Observable Deinits: \(observabledeinits) || Observation Count: \(observationCount)"
     }
 
     @IBOutlet var scrollView: UIScrollView!
 
 }
+
 

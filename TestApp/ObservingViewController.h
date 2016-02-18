@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@interface TestScrollView : UIScrollView
+
+@end
+
 @interface ObservingViewController : UIViewController
 
 @end
