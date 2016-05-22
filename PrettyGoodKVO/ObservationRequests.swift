@@ -8,7 +8,14 @@
 
 import Foundation
 
-struct ObservationRequests {
+internal enum KeyPathObservationAction {
+    case none
+    case unobserve(Set<String>)
+    case observe(String, NSKeyValueObservingOptions)
+}
+
+/// Models the requests for a single proxy observing an object on behalf of clients
+internal struct ObservationRequests {
 
     private var count: Int {
         return _requests.count
@@ -21,10 +28,9 @@ struct ObservationRequests {
     private var _requests = Set<ObservationRequest>()
     private var _requestsForClient: [ WeakClientBox : Set<ObservationRequest> ] = [ : ]
     private var _requestsForKeyPath: [ String : Set<ObservationRequest> ] = [ : ]
-}
 
-/// Getting requests for handling observations
-extension ObservationRequests {
+
+    // MARK: - Getting requests for handling observations
 
     @warn_unused_result(message="You must use the returned requests")
     func requestsForKeyPath(keyPath: String, changeKeys: [String]) -> [ObservationRequest] {
@@ -41,29 +47,16 @@ extension ObservationRequests {
         return _requestsForKeyPath[keyPath]?.filter { !$0.options.intersect(NSKeyValueObservingOptions(options)).isEmpty } ?? []
     }
 
-}
-
-/// Dropping requests
-extension ObservationRequests {
-
-    /// Drops all requests and returns keypaths that are no longer being observed, if any
-    @warn_unused_result(message="You must unobserve the returned keypaths")
-    mutating func dropAll() -> Set<String> {
-        let allKeyPaths = self.allKeyPaths
-        _requests.removeAll()
-        _requestsForClient.removeAll()
-        _requestsForKeyPath.removeAll()
-        return allKeyPaths
-    }
+    // MARK: - Dropping requests
 
     /// Drops requests that have been canceled or with nil clients and returns keypaths that are no longer being observed, if any
     @warn_unused_result(message="You must unobserve the returned keypaths")
-    mutating func dropNilClients() -> Set<String> {
-        return dropRequests(_requests.filter { $0.client.isNilClient } )
+    mutating func dropNilClients() -> KeyPathObservationAction {
+        return dropRequests(_requests.filter { $0.clientBox.isNilClient } )
     }
 
     @warn_unused_result(message="You must unobserve the returned keypaths")
-    mutating func dropForClient(client: AnyObject, keyPath: String?, options: NSKeyValueObservingOptions?) -> Set<String> {
+    mutating func dropForClient(client: AnyObject, keyPath: String?, options: NSKeyValueObservingOptions?) -> KeyPathObservationAction {
 
         func isMatchingRequest(request: ObservationRequest) -> Bool {
             switch (keyPath, options) {
@@ -79,14 +72,14 @@ extension ObservationRequests {
             }
         }
 
-        let clientBox = WeakClientBox(client: client)
+        let clientBox = WeakClientBox(client)
         return dropRequests(_requestsForClient[clientBox]?.filter(isMatchingRequest) ?? [])
 
     }
 
     @warn_unused_result(message="You must unobserve the returned keypaths")
-    private mutating func dropRequests(requestsToDrop: [ObservationRequest]) -> Set<String> {
-        guard requestsToDrop.count > 0 else { return [] }
+    private mutating func dropRequests(requestsToDrop: [ObservationRequest]) -> KeyPathObservationAction {
+        guard requestsToDrop.count > 0 else { return .none }
         _requests.subtractInPlace(requestsToDrop)
 
         var requestsForClient: [ WeakClientBox : Set<ObservationRequest> ] = [ : ]
@@ -94,7 +87,7 @@ extension ObservationRequests {
 
         for request in _requests {
             requestsForKeyPath.transformValueForKey(request.keyPath) { $0?.inserting(request) ?? Set([request]) }
-            requestsForClient.transformValueForKey(request.client) { $0?.inserting(request) ?? Set([request]) }
+            requestsForClient.transformValueForKey(request.clientBox) { $0?.inserting(request) ?? Set([request]) }
         }
 
         _requestsForClient = requestsForClient
@@ -102,17 +95,12 @@ extension ObservationRequests {
 
         var keypathsToRemove = Set<String>()
         requestsToDrop.forEach { keypathsToRemove.insert($0.keyPath) }
-        return keypathsToRemove.subtract(allKeyPaths)
+        return .unobserve(keypathsToRemove.subtract(allKeyPaths))
     }
-    
-    
 
-}
+    // MARK: - Adding requests
 
-/// Adding requests
-extension ObservationRequests {
-
-    mutating func addForClient(client: AnyObject, keyPath: String, options: NSKeyValueObservingOptions, closure: PGKVOObservationClosure, @noescape observationBlock: () -> ()) {
+    mutating func addForClient(client: AnyObject, keyPath: String, options: NSKeyValueObservingOptions, closure: PGKVOObservationClosure) -> KeyPathObservationAction {
 
         func needsObserverForRequest(request: ObservationRequest) -> Bool {
             return _requestsForKeyPath[keyPath]?
@@ -121,22 +109,20 @@ extension ObservationRequests {
                 ?? true
         }
 
-        let request = ObservationRequest(client: client, keyPath: keyPath, options: options, closure: closure)
+        let request = ObservationRequest(clientBox: WeakClientBox(client), keyPath: keyPath, options: options, closure: closure)
 
-        let shouldCallAddObserverBlock = needsObserverForRequest(request)
+        let action: KeyPathObservationAction = needsObserverForRequest(request) ? .observe(keyPath, options) : .none
 
         _requests.insert(request)
 
         _requestsForKeyPath.transformValueForKey(keyPath) {
             $0?.inserting(request) ?? Set([request])
         }
-        _requestsForClient.transformValueForKey(request.client) {
+        _requestsForClient.transformValueForKey(request.clientBox) {
             $0?.inserting(request) ?? Set([request])
         }
         
-        if shouldCallAddObserverBlock {
-            observationBlock()
-        }
+        return action
         
     }
     

@@ -14,26 +14,8 @@ class ObservableObject: NSObject {
         //debugPrint("ObservableObject did die",CFAbsoluteTimeGetCurrent())
     }
 
-    var text: String {
-        get {
-            return synchronized(self) {
-                return _text
-            }
-        }
-        set {
-            synchronized(self) {
-                _text = newValue
-            }
-        }
-    }
-    var _text = "" {
-        willSet {
-            willChangeValueForKey("text")
-        }
+    dynamic var optionalText: String?
 
-        didSet {
-            didChangeValueForKey("text")
-        }
-    }
+    dynamic var text: String = ""
 
 }

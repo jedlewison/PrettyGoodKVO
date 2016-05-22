@@ -1,22 +1,15 @@
 PODS:
-  - Nimble (3.1.0)
-  - PrettyGoodKVO (0.1.0)
-  - Quick (0.9.1)
+  - Nimble (4.0.1)
+  - Quick (0.9.2)
 
 DEPENDENCIES:
   - Nimble
-  - PrettyGoodKVO (from `.`)
   - Quick
 
-EXTERNAL SOURCES:
-  PrettyGoodKVO:
-    :path: "."
-
 SPEC CHECKSUMS:
-  Nimble: 79d40f4d69d47314229bbabacaa02b8838c779b9
-  PrettyGoodKVO: 42fc5c456db0562169529b6a4b22f3474b7b251c
-  Quick: a5221fc21788b6aeda934805e68b061839bc3165
+  Nimble: 0f3c8b8b084cda391209c3c5efbb48bedeeb920a
+  Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
 
-PODFILE CHECKSUM: b0581a7df21475e744cae494654acb1893f621ad
+PODFILE CHECKSUM: 19ad7b5c27effec0c9658d08d4f6419d0a1f75cc
 
-COCOAPODS: 1.0.0.beta.3
+COCOAPODS: 1.0.0

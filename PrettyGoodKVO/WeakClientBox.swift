@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class WeakClientBox: Hashable {
+internal struct WeakClientBox: Hashable {
 
     var isNilClient: Bool {
         return client == nil
@@ -18,7 +18,7 @@ final class WeakClientBox: Hashable {
 
     let hashValue: Int
 
-    init(client: AnyObject) {
+    init(_ client: AnyObject) {
         hashValue = client.hashValue ?? 0
         self.client = client
     }
@@ -26,5 +26,5 @@ final class WeakClientBox: Hashable {
 }
 
 func ==(lhs: WeakClientBox, rhs: WeakClientBox) -> Bool {
-    return lhs.client === rhs.client && lhs.hashValue == rhs.hashValue
+    return lhs.client === rhs.client
 }

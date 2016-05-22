@@ -9,7 +9,7 @@
 import Foundation
 import ObjectiveC
 
-func synchronized<ReturnType>(lockToken: AnyObject, @noescape action: () -> ReturnType) -> ReturnType {
+internal func synchronized<ReturnType>(lockToken: AnyObject, @noescape action: () -> ReturnType) -> ReturnType {
     objc_sync_enter(lockToken)
     let result = action()
     objc_sync_exit(lockToken)

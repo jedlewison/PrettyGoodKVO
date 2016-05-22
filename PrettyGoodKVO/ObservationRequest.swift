@@ -8,21 +8,12 @@
 
 import Foundation
 
-final class ObservationRequest {
+internal struct ObservationRequest: Hashable {
     let identifier = NSProcessInfo.processInfo().globallyUniqueString
-    let client: WeakClientBox
-    let closure: PGKVOObservationClosure
-    let options: NSKeyValueObservingOptions
+    let clientBox: WeakClientBox
     let keyPath: String
-    init(client: AnyObject, keyPath: String, options: NSKeyValueObservingOptions, closure: PGKVOObservationClosure) {
-        self.client = WeakClientBox(client: client)
-        self.keyPath = keyPath
-        self.options = options
-        self.closure = closure
-    }
-}
-
-extension ObservationRequest: Hashable {
+    let options: NSKeyValueObservingOptions
+    let closure: PGKVOObservationClosure
     var hashValue: Int { return identifier.hashValue }
 }
 

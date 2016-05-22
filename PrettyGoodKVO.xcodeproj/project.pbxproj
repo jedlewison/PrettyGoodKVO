@@ -8,15 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0EF8887BCF199B2057820CE0 /* Pods_PrettyGoodKVOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630B7810F40A5A6D4DA2209E /* Pods_PrettyGoodKVOTests.framework */; };
-		8515D57A1C68FA1B001027B9 /* PGKVOChangeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8515D5791C68FA1B001027B9 /* PGKVOChangeParser.swift */; };
-		8517D7A61C66558B00BE2809 /* WeakClientBoxSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517D7A51C66558B00BE2809 /* WeakClientBoxSpec.swift */; };
-		8517D7A81C666B0800BE2809 /* ObservationRequestsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517D7A71C666B0800BE2809 /* ObservationRequestsSpec.swift */; };
+		85008FAC1CF236BB006441D8 /* PGKVOChangeKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85008FAB1CF236BB006441D8 /* PGKVOChangeKind.swift */; };
 		8517D7AA1C66777700BE2809 /* ObservationRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517D7A91C66777700BE2809 /* ObservationRequests.swift */; };
-		8517D7B21C669A2B00BE2809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517D7B11C669A2B00BE2809 /* AppDelegate.swift */; };
-		8517D7B41C669A2B00BE2809 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517D7B31C669A2B00BE2809 /* ViewController.swift */; };
-		8517D7B71C669A2B00BE2809 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8517D7B51C669A2B00BE2809 /* Main.storyboard */; };
-		8517D7B91C669A2B00BE2809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8517D7B81C669A2B00BE2809 /* Assets.xcassets */; };
-		8517D7BC1C669A2C00BE2809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8517D7BA1C669A2B00BE2809 /* LaunchScreen.storyboard */; };
 		8529D9101C66ED9100621856 /* PGKVOObserving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8529D90F1C66ED9100621856 /* PGKVOObserving.swift */; };
 		8589900C1C61DBB300A8E186 /* PrettyGoodKVO.h in Headers */ = {isa = PBXBuildFile; fileRef = 8589900B1C61DBB300A8E186 /* PrettyGoodKVO.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		858990131C61DBB300A8E186 /* PrettyGoodKVO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 858990081C61DBB300A8E186 /* PrettyGoodKVO.framework */; };
@@ -35,11 +28,9 @@
 		85E16C481C711182004D91DD /* AVFoundation+PGKVOChangeValueConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E16C431C711182004D91DD /* AVFoundation+PGKVOChangeValueConvertible.swift */; };
 		85E16C491C711182004D91DD /* UIKit+PGKVOChangeValueConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E16C441C711182004D91DD /* UIKit+PGKVOChangeValueConvertible.swift */; };
 		85E16C4B1C7149BC004D91DD /* NSObject+PGKVO_internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E16C4A1C7149BC004D91DD /* NSObject+PGKVO_internal.swift */; };
-		85E16C511C716324004D91DD /* ObservingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E16C501C716324004D91DD /* ObservingViewController.m */; };
 		85EE52231C67A9DB00020118 /* PGKVOChangeValueConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EE52221C67A9DB00020118 /* PGKVOChangeValueConvertible.swift */; };
 		85EE52261C67AA2C00020118 /* PGKVOChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EE52251C67AA2C00020118 /* PGKVOChange.swift */; };
 		85F2C03D1C664DD30012AB1A /* PrettyGoodKVOSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F2C03C1C664DD30012AB1A /* PrettyGoodKVOSpec.swift */; };
-		BA5010E5DCC6100820E442E9 /* Pods_TestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D98150E60A903E84FC79FF0 /* Pods_TestApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,21 +46,10 @@
 /* Begin PBXFileReference section */
 		023014861156A6783900A5E2 /* Pods-PrettyGoodKVOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrettyGoodKVOTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrettyGoodKVOTests/Pods-PrettyGoodKVOTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D98150E60A903E84FC79FF0 /* Pods_TestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F9B4A7A9815DA6DDDCB9567 /* Pods-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5AFF57CA9F922D409E51BDC1 /* Pods-PrettyGoodKVOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrettyGoodKVOTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrettyGoodKVOTests/Pods-PrettyGoodKVOTests.release.xcconfig"; sourceTree = "<group>"; };
 		630B7810F40A5A6D4DA2209E /* Pods_PrettyGoodKVOTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrettyGoodKVOTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		75036F97DD3D563620545901 /* Pods-TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.release.xcconfig"; sourceTree = "<group>"; };
-		8515D5791C68FA1B001027B9 /* PGKVOChangeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PGKVOChangeParser.swift; sourceTree = "<group>"; };
-		8517D7A51C66558B00BE2809 /* WeakClientBoxSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakClientBoxSpec.swift; sourceTree = "<group>"; };
-		8517D7A71C666B0800BE2809 /* ObservationRequestsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservationRequestsSpec.swift; sourceTree = "<group>"; };
+		85008FAB1CF236BB006441D8 /* PGKVOChangeKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PGKVOChangeKind.swift; sourceTree = "<group>"; };
 		8517D7A91C66777700BE2809 /* ObservationRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservationRequests.swift; sourceTree = "<group>"; };
-		8517D7AF1C669A2B00BE2809 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8517D7B11C669A2B00BE2809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8517D7B31C669A2B00BE2809 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8517D7B61C669A2B00BE2809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8517D7B81C669A2B00BE2809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8517D7BB1C669A2C00BE2809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8517D7BD1C669A2C00BE2809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8529D90F1C66ED9100621856 /* PGKVOObserving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PGKVOObserving.swift; sourceTree = "<group>"; };
 		853B37F31C70ED96008F3D52 /* PrettyGoodKVO.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = PrettyGoodKVO.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		858990081C61DBB300A8E186 /* PrettyGoodKVO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrettyGoodKVO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,22 +73,12 @@
 		85E16C441C711182004D91DD /* UIKit+PGKVOChangeValueConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+PGKVOChangeValueConvertible.swift"; sourceTree = "<group>"; };
 		85E16C4A1C7149BC004D91DD /* NSObject+PGKVO_internal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+PGKVO_internal.swift"; sourceTree = "<group>"; };
 		85E16C4D1C715420004D91DD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		85E16C4F1C716324004D91DD /* ObservingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObservingViewController.h; sourceTree = "<group>"; };
-		85E16C501C716324004D91DD /* ObservingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObservingViewController.m; sourceTree = "<group>"; };
 		85EE52221C67A9DB00020118 /* PGKVOChangeValueConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PGKVOChangeValueConvertible.swift; sourceTree = "<group>"; };
 		85EE52251C67AA2C00020118 /* PGKVOChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PGKVOChange.swift; sourceTree = "<group>"; };
 		85F2C03C1C664DD30012AB1A /* PrettyGoodKVOSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyGoodKVOSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8517D7AC1C669A2B00BE2809 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BA5010E5DCC6100820E442E9 /* Pods_TestApp.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		858990041C61DBB300A8E186 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,21 +98,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8517D7B01C669A2B00BE2809 /* TestApp */ = {
-			isa = PBXGroup;
-			children = (
-				8517D7B11C669A2B00BE2809 /* AppDelegate.swift */,
-				8517D7B31C669A2B00BE2809 /* ViewController.swift */,
-				85E16C4F1C716324004D91DD /* ObservingViewController.h */,
-				85E16C501C716324004D91DD /* ObservingViewController.m */,
-				8517D7B51C669A2B00BE2809 /* Main.storyboard */,
-				8517D7B81C669A2B00BE2809 /* Assets.xcassets */,
-				8517D7BA1C669A2B00BE2809 /* LaunchScreen.storyboard */,
-				8517D7BD1C669A2C00BE2809 /* Info.plist */,
-			);
-			path = TestApp;
-			sourceTree = "<group>";
-		};
 		85898FFE1C61DBB300A8E186 = {
 			isa = PBXGroup;
 			children = (
@@ -150,7 +105,6 @@
 				853B37F31C70ED96008F3D52 /* PrettyGoodKVO.podspec */,
 				8589900A1C61DBB300A8E186 /* PrettyGoodKVO */,
 				858990161C61DBB300A8E186 /* PrettyGoodKVOTests */,
-				8517D7B01C669A2B00BE2809 /* TestApp */,
 				858990091C61DBB300A8E186 /* Products */,
 				AFAE8F9F7DF75A65FDB0F962 /* Pods */,
 				F794C5BC7BA6824B731BB803 /* Frameworks */,
@@ -162,7 +116,6 @@
 			children = (
 				858990081C61DBB300A8E186 /* PrettyGoodKVO.framework */,
 				858990121C61DBB300A8E186 /* PrettyGoodKVOTests.xctest */,
-				8517D7AF1C669A2B00BE2809 /* TestApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,6 +128,7 @@
 				858990221C61DBE200A8E186 /* NSObject+PGKVO.swift */,
 				8529D90F1C66ED9100621856 /* PGKVOObserving.swift */,
 				85EE52251C67AA2C00020118 /* PGKVOChange.swift */,
+				85008FAB1CF236BB006441D8 /* PGKVOChangeKind.swift */,
 				85E16C3F1C711061004D91DD /* PGKVOChangeValueConvertible */,
 				85E16C4C1C714A40004D91DD /* Internal */,
 			);
@@ -185,8 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				85F2C03C1C664DD30012AB1A /* PrettyGoodKVOSpec.swift */,
-				8517D7A51C66558B00BE2809 /* WeakClientBoxSpec.swift */,
-				8517D7A71C666B0800BE2809 /* ObservationRequestsSpec.swift */,
 				858990171C61DBB300A8E186 /* PrettyGoodKVOTests.swift */,
 				858990191C61DBB300A8E186 /* Info.plist */,
 			);
@@ -213,7 +165,6 @@
 				85E16C4A1C7149BC004D91DD /* NSObject+PGKVO_internal.swift */,
 				858990241C61DC1500A8E186 /* PGKVOProxy.swift */,
 				85DC764F1C67B0A800D872A1 /* PGKVOError.swift */,
-				8515D5791C68FA1B001027B9 /* PGKVOChangeParser.swift */,
 				85EE52271C67AAC800020118 /* Requests */,
 				85EE52281C67AAD500020118 /* Utilities */,
 			);
@@ -244,8 +195,6 @@
 			children = (
 				023014861156A6783900A5E2 /* Pods-PrettyGoodKVOTests.debug.xcconfig */,
 				5AFF57CA9F922D409E51BDC1 /* Pods-PrettyGoodKVOTests.release.xcconfig */,
-				4F9B4A7A9815DA6DDDCB9567 /* Pods-TestApp.debug.xcconfig */,
-				75036F97DD3D563620545901 /* Pods-TestApp.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -273,26 +222,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8517D7AE1C669A2B00BE2809 /* TestApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8517D7BE1C669A2C00BE2809 /* Build configuration list for PBXNativeTarget "TestApp" */;
-			buildPhases = (
-				EE375779BE0C27FA43232A0A /* Check Pods Manifest.lock */,
-				8517D7AB1C669A2B00BE2809 /* Sources */,
-				8517D7AC1C669A2B00BE2809 /* Frameworks */,
-				8517D7AD1C669A2B00BE2809 /* Resources */,
-				103BEAB6CF22FAD43074852E /* Embed Pods Frameworks */,
-				C16F34338CADB87BC9A9C2C4 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TestApp;
-			productName = TestApp;
-			productReference = 8517D7AF1C669A2B00BE2809 /* TestApp.app */;
-			productType = "com.apple.product-type.application";
-		};
 		858990071C61DBB300A8E186 /* PrettyGoodKVO */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8589901C1C61DBB300A8E186 /* Build configuration list for PBXNativeTarget "PrettyGoodKVO" */;
@@ -315,12 +244,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8589901F1C61DBB300A8E186 /* Build configuration list for PBXNativeTarget "PrettyGoodKVOTests" */;
 			buildPhases = (
-				CEF606B77ECAD92C828A6330 /* Check Pods Manifest.lock */,
+				CEF606B77ECAD92C828A6330 /* 📦 Check Pods Manifest.lock */,
 				8589900E1C61DBB300A8E186 /* Sources */,
 				8589900F1C61DBB300A8E186 /* Frameworks */,
 				858990101C61DBB300A8E186 /* Resources */,
-				6F0A44A77C2DDA64A450F8A9 /* Embed Pods Frameworks */,
-				A7658BF4ED3FB02980ECCD56 /* Copy Pods Resources */,
+				6F0A44A77C2DDA64A450F8A9 /* 📦 Embed Pods Frameworks */,
+				A7658BF4ED3FB02980ECCD56 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -342,9 +271,6 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Magic App Factory";
 				TargetAttributes = {
-					8517D7AE1C669A2B00BE2809 = {
-						CreatedOnToolsVersion = 7.2;
-					};
 					858990071C61DBB300A8E186 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -368,22 +294,11 @@
 			targets = (
 				858990071C61DBB300A8E186 /* PrettyGoodKVO */,
 				858990111C61DBB300A8E186 /* PrettyGoodKVOTests */,
-				8517D7AE1C669A2B00BE2809 /* TestApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8517D7AD1C669A2B00BE2809 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8517D7BC1C669A2C00BE2809 /* LaunchScreen.storyboard in Resources */,
-				8517D7B91C669A2B00BE2809 /* Assets.xcassets in Resources */,
-				8517D7B71C669A2B00BE2809 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		858990061C61DBB300A8E186 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -401,29 +316,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		103BEAB6CF22FAD43074852E /* Embed Pods Frameworks */ = {
+		6F0A44A77C2DDA64A450F8A9 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestApp/Pods-TestApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6F0A44A77C2DDA64A450F8A9 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,14 +331,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrettyGoodKVOTests/Pods-PrettyGoodKVOTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A7658BF4ED3FB02980ECCD56 /* Copy Pods Resources */ = {
+		A7658BF4ED3FB02980ECCD56 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,44 +346,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrettyGoodKVOTests/Pods-PrettyGoodKVOTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C16F34338CADB87BC9A9C2C4 /* Copy Pods Resources */ = {
+		CEF606B77ECAD92C828A6330 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestApp/Pods-TestApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CEF606B77ECAD92C828A6330 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		EE375779BE0C27FA43232A0A /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,16 +364,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8517D7AB1C669A2B00BE2809 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8517D7B41C669A2B00BE2809 /* ViewController.swift in Sources */,
-				85E16C511C716324004D91DD /* ObservingViewController.m in Sources */,
-				8517D7B21C669A2B00BE2809 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		858990031C61DBB300A8E186 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -511,6 +371,7 @@
 				8529D9101C66ED9100621856 /* PGKVOObserving.swift in Sources */,
 				85E16C3E1C71105B004D91DD /* CoreGraphics+PGKVOChangeValueConvertible.swift in Sources */,
 				85EE52261C67AA2C00020118 /* PGKVOChange.swift in Sources */,
+				85008FAC1CF236BB006441D8 /* PGKVOChangeKind.swift in Sources */,
 				85CECF171C63A71F00BC0B09 /* ObservationRequest.swift in Sources */,
 				85CECF191C63A75300BC0B09 /* WeakClientBox.swift in Sources */,
 				85E16C461C711182004D91DD /* CoreAnimation+PGKVOChangeValueConvertible.swift in Sources */,
@@ -526,7 +387,6 @@
 				85E16C471C711182004D91DD /* SceneKit+PGKVOChangeValueConvertible.swift in Sources */,
 				85E16C481C711182004D91DD /* AVFoundation+PGKVOChangeValueConvertible.swift in Sources */,
 				85EE52231C67A9DB00020118 /* PGKVOChangeValueConvertible.swift in Sources */,
-				8515D57A1C68FA1B001027B9 /* PGKVOChangeParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,10 +394,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8517D7A61C66558B00BE2809 /* WeakClientBoxSpec.swift in Sources */,
 				85F2C03D1C664DD30012AB1A /* PrettyGoodKVOSpec.swift in Sources */,
 				858990181C61DBB300A8E186 /* PrettyGoodKVOTests.swift in Sources */,
-				8517D7A81C666B0800BE2809 /* ObservationRequestsSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,55 +409,7 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		8517D7B51C669A2B00BE2809 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8517D7B61C669A2B00BE2809 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8517D7BA1C669A2B00BE2809 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8517D7BB1C669A2C00BE2809 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		8517D7BF1C669A2C00BE2809 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F9B4A7A9815DA6DDDCB9567 /* Pods-TestApp.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = TestApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.magicappfactory.TestApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		8517D7C01C669A2C00BE2809 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75036F97DD3D563620545901 /* Pods-TestApp.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = TestApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.magicappfactory.TestApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		8589901A1C61DBB300A8E186 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -673,6 +483,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -698,6 +509,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = PrettyGoodKVO/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -735,6 +547,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.magicappfactory.PrettyGoodKVOTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Debug;
 		};
@@ -752,15 +565,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8517D7BE1C669A2C00BE2809 /* Build configuration list for PBXNativeTarget "TestApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8517D7BF1C669A2C00BE2809 /* Debug */,
-				8517D7C01C669A2C00BE2809 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		858990021C61DBB300A8E186 /* Build configuration list for PBXProject "PrettyGoodKVO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum PGKVOError: ErrorType {
+internal enum PGKVOError: ErrorType {
     case NilChangeDictionary
     case CouldNotConvert(from: Any?, to: Any)
     case CouldNotTransform(from: Any, to: Any)
