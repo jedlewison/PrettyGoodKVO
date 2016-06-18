@@ -10,12 +10,12 @@ import MapKit
 
 extension CLLocationCoordinate2D: PGKVOChangeNSValueConvertible {
     public init?(changeValue: NSValue) {
-        self = changeValue.MKCoordinateValue
+        self = changeValue.mkCoordinateValue
     }
 }
 
 extension MKCoordinateSpan: PGKVOChangeNSValueConvertible {
     public init?(changeValue: NSValue) {
-        self = changeValue.MKCoordinateSpanValue
+        self = changeValue.mkCoordinateSpanValue
     }
 }

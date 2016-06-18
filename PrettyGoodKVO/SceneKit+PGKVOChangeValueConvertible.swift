@@ -10,18 +10,18 @@ import SceneKit
 
 extension SCNVector3: PGKVOChangeNSValueConvertible {
     public init?(changeValue: NSValue) {
-        self = changeValue.SCNVector3Value
+        self = changeValue.scnVector3Value
     }
 }
 
 extension SCNVector4: PGKVOChangeNSValueConvertible {
     public init?(changeValue: NSValue) {
-        self = changeValue.SCNVector4Value
+        self = changeValue.scnVector4Value
     }
 }
 
 extension SCNMatrix4: PGKVOChangeNSValueConvertible {
     public init?(changeValue: NSValue) {
-        self = changeValue.SCNMatrix4Value
+        self = changeValue.scnMatrix4Value
     }
 }

@@ -10,6 +10,6 @@ import QuartzCore
 
 extension CATransform3D: PGKVOChangeNSValueConvertible {
     public init?(changeValue: NSValue) {
-        self = changeValue.CATransform3DValue
+        self = changeValue.caTransform3DValue
     }
 }

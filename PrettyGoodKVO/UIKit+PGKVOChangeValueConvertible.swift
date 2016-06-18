@@ -10,12 +10,12 @@ import UIKit
 
 extension UIEdgeInsets: PGKVOChangeNSValueConvertible {
     public init?(changeValue: NSValue) {
-        self = changeValue.UIEdgeInsetsValue()
+        self = changeValue.uiEdgeInsetsValue()
     }
 }
 
 extension UIOffset: PGKVOChangeNSValueConvertible {
     public init?(changeValue: NSValue) {
-        self = changeValue.UIOffsetValue()
+        self = changeValue.uiOffsetValue()
     }
 }

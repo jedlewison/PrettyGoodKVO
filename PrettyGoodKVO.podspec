@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "PrettyGoodKVO"
-    s.version          = "0.2.0"
+    s.version          = "0.3.0"
     s.summary          = "KVO without the hassle. strongly typed in Swift"
     s.description      = "A framework for KVO with automatic unobserving, strongly typed in Swift and only firing on changes."
     s.author           = "Jed Lewison"

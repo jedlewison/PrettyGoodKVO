@@ -14,7 +14,7 @@ private var keyForAssociatedProxyObject = #selector(NSObject.pgkvo_getProxyObser
 
 internal extension NSObject {
 
-    func pgkvo_addObserver(observer: AnyObject, forKeyPath keyPath: String, options: NSKeyValueObservingOptions, closure: PGKVOObservationClosure) {
+    func pgkvo_addObserver(_ observer: AnyObject, forKeyPath keyPath: String, options: NSKeyValueObservingOptions, closure: PGKVOObservationClosure) {
 
         func getOrCreateProxyObserver() -> PGKVOProxy {
             if let kvo_observer = pgkvo_getProxyObserver() {
@@ -29,7 +29,7 @@ internal extension NSObject {
         getOrCreateProxyObserver().addForClient(observer, keyPath: keyPath, options: options, closure: closure)
     }
 
-    func pgkvo_removeObserver(observer: AnyObject, forKeyPath keyPath: String?, options: NSKeyValueObservingOptions?) {
+    func pgkvo_removeObserver(_ observer: AnyObject, forKeyPath keyPath: String?, options: NSKeyValueObservingOptions?) {
         pgkvo_getProxyObserver()?.dropForClient(observer, forKeyPath: keyPath, options: options)
     }
 

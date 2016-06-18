@@ -30,13 +30,13 @@ final internal class PGKVOProxy: NSObject {
 
     private var requests = ObservationRequests()
 
-    var contextToken = NSProcessInfo.processInfo().globallyUniqueString
+    var contextToken = ProcessInfo.processInfo().globallyUniqueString
 
-    override func observeValueForKeyPath(
-        keyPath: String?,
-        ofObject object: AnyObject?,
-                 change: [String : AnyObject]?,
-                 context: UnsafeMutablePointer<Void>)
+    override func observeValue(
+        forKeyPath keyPath: String?,
+        of object: AnyObject?,
+                 change: [NSKeyValueChangeKey : AnyObject]?,
+                 context: UnsafeMutablePointer<Void>?)
     {
         guard let keyPath = keyPath, object = object as? NSObject else { return }
 
@@ -60,7 +60,7 @@ final internal class PGKVOProxy: NSObject {
     }
 
     func dropForClient(
-        client: AnyObject,
+        _ client: AnyObject,
         forKeyPath keyPath: String?,
                    options: NSKeyValueObservingOptions?)
     {
@@ -70,7 +70,7 @@ final internal class PGKVOProxy: NSObject {
     }
 
     func addForClient(
-        client: AnyObject,
+        _ client: AnyObject,
         keyPath: String,
         options: NSKeyValueObservingOptions,
         closure: PGKVOObservationClosure)
@@ -80,7 +80,7 @@ final internal class PGKVOProxy: NSObject {
         }
     }
 
-    private func handleRequest(@noescape request: () -> KeyPathObservationAction) {
+    private func handleRequest(@noescape _ request: () -> KeyPathObservationAction) {
         synchronized(self) {
             switch request() {
             case .none:

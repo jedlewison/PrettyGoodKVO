@@ -10,30 +10,30 @@ import CoreGraphics
 
 extension CGRect: PGKVOChangeNSValueConvertible {
     public init?(changeValue: NSValue) {
-        self = changeValue.CGRectValue()
+        self = changeValue.cgRectValue()
     }
 }
 
 extension CGPoint: PGKVOChangeNSValueConvertible {
     public init?(changeValue: NSValue) {
-        self = changeValue.CGPointValue()
+        self = changeValue.cgPointValue()
     }
 }
 
 extension CGSize: PGKVOChangeNSValueConvertible {
     public init?(changeValue: NSValue) {
-        self = changeValue.CGSizeValue()
+        self = changeValue.cgSizeValue()
     }
 }
 
 extension CGVector: PGKVOChangeNSValueConvertible {
     public init?(changeValue: NSValue) {
-        self = changeValue.CGVectorValue()
+        self = changeValue.cgVectorValue()
     }
 }
 
 extension CGAffineTransform: PGKVOChangeNSValueConvertible {
     public init?(changeValue: NSValue) {
-        self = changeValue.CGAffineTransformValue()
+        self = changeValue.cgAffineTransform()
     }
 }

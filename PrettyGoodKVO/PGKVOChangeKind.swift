@@ -39,49 +39,34 @@ public enum PGKVOChangeKind<Value> {
         }
     }
 
-    internal init?(changes: [String : AnyObject]?) {
+    internal init?(changes: [NSKeyValueChangeKey : AnyObject]?) {
         guard let changes = changes
-            where changes.hasKVOChange() else { return nil }
+            where PGKVOChangeKind.valuesChanged(inChanges: changes) else { return nil }
         do {
-            let old: Value = try changes.valueForChange(.old)
-            let new: Value = try changes.valueForChange(.new)
+            let old: Value = try PGKVOChangeKind.value(forChangeKey: .oldKey, inChanges: changes)
+            let new: Value = try PGKVOChangeKind.value(forChangeKey: .newKey, inChanges: changes)
             self = .change(old: old, new: new)
         } catch {
             debugPrint(error)
             return nil
         }
     }
+
 }
 
-// MARK: - Private utilities for parsing the changes dictionary
+private extension PGKVOChangeKind {
 
-private struct KeyValueChangeKind {
-    static let old = KeyValueChangeKind(key: NSKeyValueChangeOldKey)
-    static let new = KeyValueChangeKind(key: NSKeyValueChangeNewKey)
-    let key: String
-}
-
-private protocol PGKVOStringProtocol { }
-extension String: PGKVOStringProtocol { }
-
-private extension Dictionary where Key: PGKVOStringProtocol, Value: AnyObject {
-
-    subscript (changeKey: KeyValueChangeKind) -> Value? {
-        guard let key = changeKey.key as? Key else { return nil }
-        return self[key]
+    private static func valuesChanged(inChanges changes: [NSKeyValueChangeKey : AnyObject]) -> Bool {
+        return objcValue(forChangeKey: .oldKey, inChanges: changes) != objcValue(forChangeKey: .newKey, inChanges: changes)
     }
 
-    func objcValueForChange(changeKey: KeyValueChangeKind) -> NSObject? {
-        return self[changeKey] as? NSObject
+    private static func objcValue(forChangeKey changeKey: NSKeyValueChangeKey, inChanges changes: [NSKeyValueChangeKey : AnyObject]) -> NSObject? {
+        return changes[changeKey] as? NSObject
     }
 
-    func hasKVOChange() -> Bool {
-        return objcValueForChange(.old) != objcValueForChange(.new)
-    }
-
-    func valueForChange<T>(changeKey: KeyValueChangeKind) throws -> T {
+    private static func value<T>(forChangeKey changeKey: NSKeyValueChangeKey, inChanges changes: [NSKeyValueChangeKey : AnyObject]) throws -> T {
         // Make sure we actually have a value
-        guard let rawValue = self[changeKey] else { throw PGKVOError.NilChangeDictionary }
+        guard let rawValue = changes[changeKey] else { throw PGKVOError.nilChangeDictionary }
 
         // Unwrap the value to the expected type, or fail
         switch T.self {
@@ -97,7 +82,7 @@ private extension Dictionary where Key: PGKVOStringProtocol, Value: AnyObject {
             }
         }
 
-        throw PGKVOError.CouldNotConvert(from: rawValue, to: T.self)
+        throw PGKVOError.couldNotConvert(from: rawValue, to: T.self)
     }
     
 }

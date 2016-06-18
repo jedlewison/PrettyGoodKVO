@@ -37,7 +37,7 @@ public extension PGKVOObserving {
     ///     - closure: A closure returning the `PGKVOChange` instance.
     /// - SeeAlso: `PGKVOChange` and `NSObject+PGKVO` for a discussion of PGKVO's proxy observer model.
     public func observe<Observed: NSObject, Value>(
-        object: Observed,
+        _ object: Observed,
         keyPath: String,
         initialValue: Value,
         closure: (change: PGKVOChange<Observed, Value>) -> ())
@@ -51,7 +51,7 @@ public extension PGKVOObserving {
                                         observer: self)
         closure(change: initialChange)
 
-        object.pgkvo_addObserver(self, forKeyPath: keyPath, options: [.Old, .New])
+        object.pgkvo_addObserver(self, forKeyPath: keyPath, options: [.old, .new])
         { [weak self] observed, _, changes in
             guard let strongSelf = self,
                 observed = observed as? Observed,
@@ -69,12 +69,12 @@ public extension PGKVOObserving {
 
     /// Stops `self` from observing specified `keyPath` of `object`.
     /// - Note: Specify `nil` for `keyPath` to stop `self` from observing the object completely.
-    public func unobserve(object: NSObject, keyPath: String) {
-        object.pgkvo_removeObserver(self, forKeyPath: keyPath, options: [.Old, .New])
+    public func unobserve(_ object: NSObject, keyPath: String) {
+        object.pgkvo_removeObserver(self, forKeyPath: keyPath, options: [.old, .new])
     }
 
     /// Same as `unobserve(anObject, keyPath: nil)`
     public func unobserveAllKeyPaths(ofObject object: NSObject) {
-        object.pgkvo_removeObserver(self, forKeyPath: nil, options: [.Old, .New])
+        object.pgkvo_removeObserver(self, forKeyPath: nil, options: [.old, .new])
     }
 }

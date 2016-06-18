@@ -10,19 +10,19 @@ import AVFoundation
 
 extension CMTime: PGKVOChangeNSValueConvertible {
     public init?(changeValue: NSValue) {
-        self = changeValue.CMTimeValue
+        self = changeValue.timeValue
     }
 }
 
 extension CMTimeRange: PGKVOChangeNSValueConvertible {
     public init?(changeValue: NSValue) {
-        self = changeValue.CMTimeRangeValue
+        self = changeValue.timeRangeValue
     }
 }
 
 extension CMTimeMapping: PGKVOChangeNSValueConvertible {
     public init?(changeValue: NSValue) {
-        self = changeValue.CMTimeMappingValue
+        self = changeValue.timeMappingValue
     }
 }
 

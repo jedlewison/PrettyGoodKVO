@@ -9,7 +9,7 @@
 import Foundation
 
 internal struct ObservationRequest: Hashable {
-    let identifier = NSProcessInfo.processInfo().globallyUniqueString
+    let identifier = ProcessInfo.processInfo().globallyUniqueString
     let clientBox: WeakClientBox
     let keyPath: String
     let options: NSKeyValueObservingOptions

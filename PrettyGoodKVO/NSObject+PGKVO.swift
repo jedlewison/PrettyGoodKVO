@@ -15,7 +15,7 @@ import ObjectiveC
 ///     - observer: The observer (the `self` of the object that start observing)
 ///     - changes: The dictionary of KVO change notifications
 ///     - Note: In Objective-C, you may wish to cast observed to typeof(object) and observer to typeof(self).
-public typealias PGKVOObservationClosure = (observed: AnyObject, observer: AnyObject, changes: [String : AnyObject]?) -> ()
+public typealias PGKVOObservationClosure = (observed: AnyObject, observer: AnyObject, changes: [NSKeyValueChangeKey : AnyObject]?) -> ()
 
 /// Use these extensions to observe or unobserve objects from Objective-C or Swift.
 /// When using Swift, you should generally use the `PGKVOObserving` protocol unless you need
@@ -39,7 +39,7 @@ public extension NSObject {
     /// - Warning: Not all ObjectiveC classes are KVO compliant. You must verify that the object you are attempting
     /// to observe supports KVO or you will face trouble ahead.
     ///
-    public func pgkvo_observe(object: NSObject, forKeyPath keyPath: String, options: NSKeyValueObservingOptions, closure: PGKVOObservationClosure) {
+    public func pgkvo_observe(_ object: NSObject, forKeyPath keyPath: String, options: NSKeyValueObservingOptions, closure: PGKVOObservationClosure) {
         object.pgkvo_addObserver(self, forKeyPath: keyPath, options: options, closure: closure)
     }
 
@@ -48,7 +48,7 @@ public extension NSObject {
     /// - Parameters:
     ///     - object: The object to unobserve
     ///     - forKeyPath: The keyPath of the object to unobserve. Specify nil for all keypaths.
-    public func pgkvo_unobserve(object: NSObject, forKeyPath keyPath: String?) {
+    public func pgkvo_unobserve(_ object: NSObject, forKeyPath keyPath: String?) {
         pgkvo_unobserve(object, forKeyPath: keyPath, options: nil)
     }
 
@@ -57,7 +57,7 @@ public extension NSObject {
     ///     - object: The object to unobserve
     ///     - forKeyPath: The keyPath of the object to unobserve. Specify nil for all keypaths.
     ///     - options: The KVO options to unobserve. Specify nil for all options. Has no effect if keyPath is nil.
-    public func pgkvo_unobserve(object: NSObject, forKeyPath keyPath: String?, options: NSKeyValueObservingOptions?) {
+    public func pgkvo_unobserve(_ object: NSObject, forKeyPath keyPath: String?, options: NSKeyValueObservingOptions?) {
         object.pgkvo_removeObserver(self, forKeyPath: keyPath, options: options)
     }
     
